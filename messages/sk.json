@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "O fotografovi",
+    "tournaments": "Turnaje",
+    "pricing": "Cenník",
+    "contact": "Kontakt",
+    "gallery": "Galéria"
+  },
+  "hero": {
+    "title": "Tanečná Fotografia",
+    "subtitle": "Zachytávam každý pohyb — vášeň, emócie a krásu tanca v jedinom zábere.",
+    "cta": "Zobraziť galériu",
+    "ctaContact": "Kontaktujte nás"
+  },
+  "about": {
+    "title": "O fotografovi",
+    "p1": "Som fotograf špecializujúci sa na tanečnú fotografiu. Viac ako 10 rokov sprevádzam tanečníkov na súťažiach po celom Poľsku a Európe.",
+    "p2": "Mojou vášňou je zachytiť dynamiku tanca — ten prchavý okamih, keď sa hudba a pohyb splynú do jedného.",
+    "p3": "Spolupracujem s tanečníkmi, tanečnými školami a organizátormi súťaží po celom Poľsku.",
+    "imageAlt": "WJAMM Photo — tanečný fotograf"
+  },
+  "tournaments": {
+    "title": "Turnaje",
+    "subtitle": "Zistite, ktoré turnaje som fotografoval a nájdite svoje fotografie",
+    "viewPhotos": "Zobraziť fotografie",
+    "upcoming": "Nadchádzajúce",
+    "past": "Minulé",
+    "allTournaments": "Všetky turnaje",
+    "city": "Mesto",
+    "date": "Dátum"
+  },
+  "pricing": {
+    "title": "Cenník",
+    "subtitle": "Transparentné ceny, vysoká kvalita. Objednajte si svoje tanečné fotografie.",
+    "photos": "fotografií",
+    "photo": "fotografia",
+    "buyNow": "Objednať",
+    "currency": "PLN",
+    "note": "Ceny zahŕňajú digitálne spracovanie a doručenie súborov vo vysokom rozlíšení.",
+    "contact": "Kontaktujte nás pre individuálnu cenovú ponuku"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Máte otázky? Napíšte alebo zavolajte — odpoviem čo najskôr.",
+    "name": "Meno a priezvisko",
+    "email": "E-mailová adresa",
+    "subject": "Predmet",
+    "message": "Správa",
+    "send": "Odoslať správu",
+    "sending": "Odosielanie...",
+    "success": "Správa odoslaná! Čoskoro sa ozvem.",
+    "error": "Chyba pri odosielaní. Skúste znova alebo napíšte priamo na e-mail.",
+    "phone": "Telefón",
+    "emailLabel": "E-mail",
+    "location": "Poloha",
+    "locationValue": "Poľsko",
+    "namePlaceholder": "Ján Novák",
+    "emailPlaceholder": "jan@example.com",
+    "subjectPlaceholder": "Dopyt ohľadne fotografií z turnaja",
+    "messagePlaceholder": "Dobrý deň! Bol som na turnaji v... a chcel by som si objednať fotografie..."
+  },
+  "footer": {
+    "tagline": "Tanečná fotografia na najvyššej úrovni",
+    "quickLinks": "Rýchle odkazy",
+    "followUs": "Sledujte nás",
+    "rights": "Všetky práva vyhradené"
+  },
+  "meta": {
+    "title": "WJAMM Photo — Tanečná fotografia",
+    "description": "Profesionálna tanečná fotografia. Turnaje, súťaže, prehliadky. Objednajte si fotografie z tanečných súťaží v Poľsku a Európe."
+  }
+}

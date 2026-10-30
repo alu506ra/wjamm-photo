@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "tournaments": "Turniere",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "gallery": "Galerie"
+  },
+  "hero": {
+    "title": "Tanzfotografie",
+    "subtitle": "Ich halte jede Bewegung fest — die Leidenschaft, Emotionen und Schönheit des Tanzes in einem einzigen Bild.",
+    "cta": "Galerie ansehen",
+    "ctaContact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über den Fotografen",
+    "p1": "Ich bin Fotograf, spezialisiert auf Tanzfotografie. Seit über 10 Jahren begleite ich Tänzer bei Wettbewerben in ganz Polen und Europa.",
+    "p2": "Meine Leidenschaft ist es, die Dynamik des Tanzes einzufangen — jenen flüchtigen Moment, wenn Musik und Bewegung eins werden.",
+    "p3": "Ich arbeite mit Tänzern, Tanzschulen und Veranstaltern in ganz Polen zusammen.",
+    "imageAlt": "WJAMM Photo — Tanzfotograf"
+  },
+  "tournaments": {
+    "title": "Turniere",
+    "subtitle": "Sehen Sie, welche Turniere ich fotografiert habe und finden Sie Ihre Fotos",
+    "viewPhotos": "Fotos ansehen",
+    "upcoming": "Bevorstehend",
+    "past": "Vergangene",
+    "allTournaments": "Alle Turniere",
+    "city": "Stadt",
+    "date": "Datum"
+  },
+  "pricing": {
+    "title": "Preise",
+    "subtitle": "Transparente Preise, hohe Qualität. Bestellen Sie Ihre Tanzfotos.",
+    "photos": "Fotos",
+    "photo": "Foto",
+    "buyNow": "Bestellen",
+    "currency": "PLN",
+    "note": "Preise beinhalten digitale Bearbeitung und Lieferung von Dateien in hoher Auflösung.",
+    "contact": "Kontaktieren Sie uns für individuelle Preisgestaltung"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Haben Sie Fragen? Schreiben oder rufen Sie an — ich antworte so schnell wie möglich.",
+    "name": "Vor- und Nachname",
+    "email": "E-Mail-Adresse",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Sende...",
+    "success": "Nachricht gesendet! Ich melde mich bald.",
+    "error": "Fehler beim Senden. Versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail.",
+    "phone": "Telefon",
+    "emailLabel": "E-Mail",
+    "location": "Standort",
+    "locationValue": "Polen",
+    "namePlaceholder": "Max Mustermann",
+    "emailPlaceholder": "max@example.com",
+    "subjectPlaceholder": "Anfrage zu Turnierfotos",
+    "messagePlaceholder": "Hallo! Ich war beim Turnier in... und möchte Fotos bestellen..."
+  },
+  "footer": {
+    "tagline": "Tanzfotografie auf höchstem Niveau",
+    "quickLinks": "Schnelllinks",
+    "followUs": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten"
+  },
+  "meta": {
+    "title": "WJAMM Photo — Tanzfotografie",
+    "description": "Professionelle Tanzfotografie. Turniere, Wettkämpfe, Shows. Bestellen Sie Ihre Fotos von Tanzwettbewerben in Polen und Europa."
+  }
+}

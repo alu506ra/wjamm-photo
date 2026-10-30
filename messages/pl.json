@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "O fotografze",
+    "tournaments": "Turnieje",
+    "pricing": "Cennik",
+    "contact": "Kontakt",
+    "gallery": "Galeria"
+  },
+  "hero": {
+    "title": "Fotografia Taneczna",
+    "subtitle": "Zamrażam każdy ruch — pasję, emocje i piękno tańca w jednym kadrze.",
+    "cta": "Zobacz galerię",
+    "ctaContact": "Skontaktuj się"
+  },
+  "about": {
+    "title": "O fotografze",
+    "p1": "Jestem fotografem specjalizującym się w fotografii tanecznej. Od ponad 10 lat towarzyszę tancerzom na turniejach w całej Polsce i Europie, uwieczniając każdą chwilę pełną emocji i ruchu.",
+    "p2": "Moją pasją jest oddanie dynamiki tańca — tej ulotnej chwili, gdy muzyka i ruch łączą się w jedno. Pracuję z profesjonalnym sprzętem, który pozwala uchwycić najszybsze tempo.",
+    "p3": "Współpracuję z tancerzami, szkołami tańca i organizatorami turniejów na terenie całej Polski.",
+    "imageAlt": "WJAMM Photo — fotograf taneczny"
+  },
+  "tournaments": {
+    "title": "Turnieje",
+    "subtitle": "Sprawdź, na których turniejach byłem i znajdź swoje zdjęcia",
+    "viewPhotos": "Zobacz zdjęcia",
+    "upcoming": "Nadchodzące",
+    "past": "Zakończone",
+    "allTournaments": "Wszystkie turnieje",
+    "city": "Miasto",
+    "date": "Data"
+  },
+  "pricing": {
+    "title": "Cennik",
+    "subtitle": "Przejrzyste ceny, wysoka jakość. Zamów swoje zdjęcia taneczne.",
+    "photos": "zdjęć",
+    "photo": "zdjęcie",
+    "buyNow": "Zamów",
+    "currency": "zł",
+    "note": "Ceny zawierają obróbkę cyfrową i dostarczenie plików w wysokiej rozdzielczości. Przy zamówieniu powyżej 20 zdjęć — indywidualna wycena.",
+    "contact": "Skontaktuj się po indywidualną wycenę"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Masz pytania? Napisz lub zadzwoń — odpiszę najszybciej jak mogę.",
+    "name": "Imię i nazwisko",
+    "email": "Adres e-mail",
+    "subject": "Temat",
+    "message": "Wiadomość",
+    "send": "Wyślij wiadomość",
+    "sending": "Wysyłam...",
+    "success": "Wiadomość wysłana! Odezwę się wkrótce.",
+    "error": "Błąd wysyłania. Spróbuj ponownie lub napisz bezpośrednio na e-mail.",
+    "phone": "Telefon",
+    "emailLabel": "E-mail",
+    "location": "Lokalizacja",
+    "locationValue": "Polska",
+    "namePlaceholder": "Jan Kowalski",
+    "emailPlaceholder": "jan@example.com",
+    "subjectPlaceholder": "Zapytanie o zdjęcia z turnieju",
+    "messagePlaceholder": "Cześć! Byłem na turnieju w... i chciałbym zamówić zdjęcia..."
+  },
+  "footer": {
+    "tagline": "Fotografia taneczna na najwyższym poziomie",
+    "quickLinks": "Szybkie linki",
+    "followUs": "Obserwuj",
+    "rights": "Wszelkie prawa zastrzeżone"
+  },
+  "meta": {
+    "title": "WJAMM Photo — Fotografia Taneczna",
+    "description": "Profesjonalna fotografia taneczna. Turnieje, zawody, pokazy. Zamów swoje zdjęcia z turniejów tanecznych w Polsce i Europie."
+  }
+}

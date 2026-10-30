@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "Chi sono",
+    "tournaments": "Tornei",
+    "pricing": "Prezzi",
+    "contact": "Contatti",
+    "gallery": "Galleria"
+  },
+  "hero": {
+    "title": "Fotografia di Danza",
+    "subtitle": "Congelo ogni movimento — la passione, le emozioni e la bellezza della danza in un singolo scatto.",
+    "cta": "Vedi la galleria",
+    "ctaContact": "Contattami"
+  },
+  "about": {
+    "title": "Il Fotografo",
+    "p1": "Sono un fotografo specializzato nella fotografia di danza. Da oltre 10 anni accompagno i ballerini nelle competizioni in tutta la Polonia e l'Europa.",
+    "p2": "La mia passione è trasmettere la dinamica della danza — quel momento fugace in cui musica e movimento diventano uno.",
+    "p3": "Collaboro con ballerini, scuole di danza e organizzatori di competizioni in tutta la Polonia.",
+    "imageAlt": "WJAMM Photo — fotografo di danza"
+  },
+  "tournaments": {
+    "title": "Tornei",
+    "subtitle": "Scopri quali tornei ho fotografato e trova le tue foto",
+    "viewPhotos": "Vedi le foto",
+    "upcoming": "In arrivo",
+    "past": "Passati",
+    "allTournaments": "Tutti i tornei",
+    "city": "Città",
+    "date": "Data"
+  },
+  "pricing": {
+    "title": "Prezzi",
+    "subtitle": "Prezzi trasparenti, alta qualità. Ordina le tue foto di danza.",
+    "photos": "foto",
+    "photo": "foto",
+    "buyNow": "Ordina",
+    "currency": "PLN",
+    "note": "I prezzi includono l'elaborazione digitale e la consegna di file in alta risoluzione.",
+    "contact": "Contattaci per un preventivo personalizzato"
+  },
+  "contact": {
+    "title": "Contatti",
+    "subtitle": "Hai domande? Scrivi o chiama — risponderò il prima possibile.",
+    "name": "Nome e cognome",
+    "email": "Indirizzo email",
+    "subject": "Oggetto",
+    "message": "Messaggio",
+    "send": "Invia messaggio",
+    "sending": "Invio in corso...",
+    "success": "Messaggio inviato! Ti risponderò presto.",
+    "error": "Errore di invio. Riprova o scrivi direttamente all'email.",
+    "phone": "Telefono",
+    "emailLabel": "Email",
+    "location": "Posizione",
+    "locationValue": "Polonia",
+    "namePlaceholder": "Mario Rossi",
+    "emailPlaceholder": "mario@example.com",
+    "subjectPlaceholder": "Richiesta foto dal torneo",
+    "messagePlaceholder": "Ciao! Ero al torneo a... e vorrei ordinare le foto..."
+  },
+  "footer": {
+    "tagline": "Fotografia di danza al massimo livello",
+    "quickLinks": "Link rapidi",
+    "followUs": "Seguici",
+    "rights": "Tutti i diritti riservati"
+  },
+  "meta": {
+    "title": "WJAMM Photo — Fotografia di Danza",
+    "description": "Fotografia di danza professionale. Tornei, competizioni, spettacoli. Ordina le tue foto dalle competizioni di danza in Polonia e Europa."
+  }
+}

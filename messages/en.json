@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "About",
+    "tournaments": "Tournaments",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "gallery": "Gallery"
+  },
+  "hero": {
+    "title": "Dance Photography",
+    "subtitle": "I freeze every move — the passion, emotion and beauty of dance in a single frame.",
+    "cta": "View Gallery",
+    "ctaContact": "Get in Touch"
+  },
+  "about": {
+    "title": "About the Photographer",
+    "p1": "I am a photographer specializing in dance photography. For over 10 years I have accompanied dancers at competitions across Poland and Europe, capturing every emotion-filled moment of movement.",
+    "p2": "My passion is conveying the dynamics of dance — that fleeting moment when music and movement become one. I work with professional equipment capable of capturing the fastest tempos.",
+    "p3": "I collaborate with dancers, dance schools and competition organizers throughout Poland.",
+    "imageAlt": "WJAMM Photo — dance photographer"
+  },
+  "tournaments": {
+    "title": "Tournaments",
+    "subtitle": "Check which tournaments I covered and find your photos",
+    "viewPhotos": "View Photos",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "allTournaments": "All Tournaments",
+    "city": "City",
+    "date": "Date"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Transparent prices, high quality. Order your dance photos.",
+    "photos": "photos",
+    "photo": "photo",
+    "buyNow": "Order",
+    "currency": "PLN",
+    "note": "Prices include digital processing and delivery of high-resolution files. For orders over 20 photos — individual pricing.",
+    "contact": "Contact us for custom pricing"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have questions? Write or call — I'll respond as quickly as possible.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Error sending. Try again or write directly to the email.",
+    "phone": "Phone",
+    "emailLabel": "Email",
+    "location": "Location",
+    "locationValue": "Poland",
+    "namePlaceholder": "John Smith",
+    "emailPlaceholder": "john@example.com",
+    "subjectPlaceholder": "Inquiry about tournament photos",
+    "messagePlaceholder": "Hi! I was at the tournament in... and I'd like to order photos..."
+  },
+  "footer": {
+    "tagline": "Dance photography at the highest level",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved"
+  },
+  "meta": {
+    "title": "WJAMM Photo — Dance Photography",
+    "description": "Professional dance photography. Tournaments, competitions, shows. Order your photos from dance competitions in Poland and Europe."
+  }
+}

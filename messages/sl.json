@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "about": "O fotografu",
+    "tournaments": "Turnirji",
+    "pricing": "Cenik",
+    "contact": "Kontakt",
+    "gallery": "Galerija"
+  },
+  "hero": {
+    "title": "Plesna Fotografija",
+    "subtitle": "Zamrznem vsak gib — strast, čustva in lepoto plesa v enem samem posnetku.",
+    "cta": "Oglej si galerijo",
+    "ctaContact": "Stopite v stik"
+  },
+  "about": {
+    "title": "O fotografu",
+    "p1": "Sem fotograf, specializiran za plesno fotografijo. Več kot 10 let spremljam plesalce na tekmovanjih po vsej Poljski in Evropi.",
+    "p2": "Moja strast je prenesti dinamiko plesa — tisti bežni trenutek, ko sta glasba in gibanje eno.",
+    "p3": "Sodelujem s plesalci, plesnimi šolami in organizatorji tekmovanj po vsej Poljski.",
+    "imageAlt": "WJAMM Photo — plesni fotograf"
+  },
+  "tournaments": {
+    "title": "Turnirji",
+    "subtitle": "Preverite, katere turnirje sem fotografiral, in poiščite svoje fotografije",
+    "viewPhotos": "Oglej si fotografije",
+    "upcoming": "Prihajajoči",
+    "past": "Pretekli",
+    "allTournaments": "Vsi turnirji",
+    "city": "Mesto",
+    "date": "Datum"
+  },
+  "pricing": {
+    "title": "Cenik",
+    "subtitle": "Pregledne cene, visoka kakovost. Naročite svoje plesne fotografije.",
+    "photos": "fotografij",
+    "photo": "fotografija",
+    "buyNow": "Naroči",
+    "currency": "PLN",
+    "note": "Cene vključujejo digitalno obdelavo in dostavo datotek v visoki ločljivosti.",
+    "contact": "Kontaktirajte nas za individualno ponudbo"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Imate vprašanja? Pišite ali pokličite — odgovoril bom čim prej.",
+    "name": "Ime in priimek",
+    "email": "E-poštni naslov",
+    "subject": "Zadeva",
+    "message": "Sporočilo",
+    "send": "Pošlji sporočilo",
+    "sending": "Pošiljanje...",
+    "success": "Sporočilo poslano! Kmalu se oglasim.",
+    "error": "Napaka pri pošiljanju. Poskusite znova ali pišite neposredno na e-pošto.",
+    "phone": "Telefon",
+    "emailLabel": "E-pošta",
+    "location": "Lokacija",
+    "locationValue": "Poljska",
+    "namePlaceholder": "Janez Novak",
+    "emailPlaceholder": "janez@example.com",
+    "subjectPlaceholder": "Povpraševanje glede fotografij s turnirja",
+    "messagePlaceholder": "Pozdravljeni! Bil sem na turnirju v... in rad bi naročil fotografije..."
+  },
+  "footer": {
+    "tagline": "Plesna fotografija na najvišji ravni",
+    "quickLinks": "Hitre povezave",
+    "followUs": "Sledite nam",
+    "rights": "Vse pravice pridržane"
+  },
+  "meta": {
+    "title": "WJAMM Photo — Plesna fotografija",
+    "description": "Profesionalna plesna fotografija. Turnirji, tekmovanja, nastopi. Naročite fotografije s plesnih tekmovanj na Poljskem in v Evropi."
+  }
+}
