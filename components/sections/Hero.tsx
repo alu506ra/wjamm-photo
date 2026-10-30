@@ -1,9 +1,16 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), 80);
+    return () => clearTimeout(timer);
+  }, []);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -12,63 +19,207 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        background: "#111",
+      }}
     >
-      {/* Background gradient — replace with next/image when real photo is available */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_at_top_right,_#e63946_0%,_transparent_60%)]" />
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_bottom_left,_#e63946_0%,_transparent_60%)]" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-      </div>
+      {/* Background layers */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "radial-gradient(ellipse 80% 60% at 70% 30%, rgba(230,57,70,0.18) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "radial-gradient(ellipse 60% 40% at 20% 80%, rgba(230,57,70,0.08) 0%, transparent 60%)",
+        }}
+      />
+      {/* Dot pattern */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage:
+            "radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
+      />
+      {/* Diagonal line accent */}
+      <div
+        style={{
+          position: "absolute",
+          top: "20%",
+          right: "8%",
+          width: 1,
+          height: "40%",
+          background: "linear-gradient(to bottom, transparent, rgba(230,57,70,0.4), transparent)",
+        }}
+      />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-medium mb-6 animate-fade-in">
-          <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-          WJAMM Photo
+      <div
+        style={{
+          position: "relative",
+          zIndex: 10,
+          textAlign: "center",
+          padding: "0 24px",
+          maxWidth: 860,
+          margin: "0 auto",
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0)" : "translateY(24px)",
+          transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
+        }}
+      >
+        {/* Badge */}
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            padding: "6px 16px",
+            borderRadius: 100,
+            background: "rgba(230,57,70,0.1)",
+            border: "1px solid rgba(230,57,70,0.3)",
+            marginBottom: 28,
+          }}
+        >
+          <span
+            style={{
+              width: 7,
+              height: 7,
+              borderRadius: "50%",
+              background: "#e63946",
+              display: "inline-block",
+              animation: "pulse-dot 1.5s ease-in-out infinite",
+            }}
+          />
+          <span style={{ color: "#e63946", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+            WJAMM Photo
+          </span>
         </div>
 
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight tracking-tight">
-          {t("title")}
+        {/* Heading */}
+        <h1
+          style={{
+            fontSize: "clamp(3rem, 9vw, 7rem)",
+            fontWeight: 900,
+            color: "#fff",
+            lineHeight: 1.05,
+            letterSpacing: "-2px",
+            margin: "0 0 24px",
+          }}
+        >
+          {t("title").split(" ").map((word, i) => (
+            <span key={i} style={{ display: "inline-block", marginRight: i < t("title").split(" ").length - 1 ? "0.25em" : 0 }}>
+              {i === 0 ? word : <span style={{ color: "#e63946" }}>{word}</span>}
+            </span>
+          ))}
         </h1>
 
-        <p className="text-xl sm:text-2xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+        {/* Subtitle */}
+        <p
+          style={{
+            fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+            color: "#9ca3af",
+            lineHeight: 1.7,
+            margin: "0 auto 40px",
+            maxWidth: 560,
+          }}
+        >
           {t("subtitle")}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        {/* CTAs */}
+        <div
+          style={{
+            display: "flex",
+            gap: 16,
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
           <button
             onClick={() => scrollTo("tournaments")}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/25 text-lg"
+            className="btn-primary"
           >
             {t("cta")}
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </button>
           <button
             onClick={() => scrollTo("contact")}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent hover:bg-white/5 text-white font-semibold rounded-xl border border-zinc-600 hover:border-zinc-400 transition-all duration-200 text-lg"
+            className="btn-secondary"
           >
             {t("ctaContact")}
           </button>
         </div>
+
+        {/* Stats strip */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 40,
+            marginTop: 64,
+            flexWrap: "wrap",
+          }}
+        >
+          {[
+            { n: "10+", l: "lat doświadczenia" },
+            { n: "50+", l: "turniejów" },
+            { n: "10k+", l: "zdjęć" },
+          ].map((s) => (
+            <div key={s.l} style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 28, fontWeight: 900, color: "#e63946", lineHeight: 1 }}>
+                {s.n}
+              </div>
+              <div style={{ fontSize: 12, color: "#6b7280", marginTop: 4, textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                {s.l}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 animate-bounce">
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      {/* Scroll chevron */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 32,
+          left: "50%",
+          transform: "translateX(-50%)",
+          color: "#4b5563",
+          animation: "bounce 2s ease-in-out infinite",
+        }}
+      >
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </div>
+
+      <style>{`
+        @keyframes pulse-dot {
+          0%, 100% { opacity: 1; }
+          50%       { opacity: 0.3; }
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0); }
+          50%       { transform: translateX(-50%) translateY(8px); }
+        }
+      `}</style>
     </section>
   );
 }

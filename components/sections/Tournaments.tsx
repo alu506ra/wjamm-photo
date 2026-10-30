@@ -11,12 +11,12 @@ export default function Tournaments() {
   const [filter, setFilter] = useState<"all" | "upcoming" | "past">("all");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) setVisible(true); },
+      { threshold: 0.08 }
     );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
   }, []);
 
   const filtered = tournaments.filter((tr) => {
@@ -29,101 +29,139 @@ export default function Tournaments() {
     <section
       id="tournaments"
       ref={ref}
-      className={`py-24 px-4 bg-zinc-950/50 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      style={{
+        padding: "100px 24px",
+        background: "#0d0d0d",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(32px)",
+        transition: "opacity 0.7s ease-out, transform 0.7s ease-out",
+      }}
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">
-            Zalamo
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mt-2">{t("title")}</h2>
-          <p className="text-zinc-400 text-lg mt-4 max-w-2xl mx-auto">{t("subtitle")}</p>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: 48 }}>
+          <div className="section-tag">Zalamo</div>
+          <h2 className="section-title">{t("title")}</h2>
+          <p className="section-subtitle">{t("subtitle")}</p>
         </div>
 
-        {/* Filter tabs */}
-        <div className="flex justify-center gap-2 mb-10">
+        {/* Filters */}
+        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 40 }}>
           {(["all", "upcoming", "past"] as const).map((f) => (
             <button
               key={f}
               onClick={() => setFilter(f)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                filter === f
-                  ? "bg-red-500 text-white shadow-lg shadow-red-500/25"
-                  : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
-              }`}
+              style={{
+                padding: "8px 20px",
+                borderRadius: 100,
+                fontSize: 13,
+                fontWeight: 600,
+                cursor: "pointer",
+                border: "none",
+                transition: "background 0.2s, color 0.2s, box-shadow 0.2s",
+                background: filter === f ? "#e63946" : "#1a1a1a",
+                color: filter === f ? "#fff" : "#9ca3af",
+                boxShadow: filter === f ? "0 4px 16px rgba(230,57,70,0.3)" : "none",
+              }}
             >
               {f === "all" ? t("allTournaments") : f === "upcoming" ? t("upcoming") : t("past")}
             </button>
           ))}
         </div>
 
-        {/* Tournament cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {filtered.map((tournament, i) => (
+        {/* Cards grid */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+            gap: 16,
+          }}
+        >
+          {filtered.map((tr) => (
             <a
-              key={tournament.id}
-              href={tournament.zalamo_link}
+              key={tr.id}
+              href={tr.zalamo_link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-red-500/50 rounded-2xl p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/10"
-              style={{ animationDelay: `${i * 50}ms` }}
+              className="card-hover"
+              style={{
+                display: "block",
+                background: "#1a1a1a",
+                border: "1px solid #2a2a2a",
+                borderRadius: 16,
+                padding: 20,
+                textDecoration: "none",
+                color: "inherit",
+              }}
             >
-              <div className="flex items-start justify-between mb-3">
+              {/* Status badge */}
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
                 <span
-                  className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full ${
-                    tournament.upcoming
-                      ? "bg-red-500/15 text-red-400 border border-red-500/30"
-                      : "bg-zinc-800 text-zinc-500 border border-zinc-700"
-                  }`}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                    fontSize: 11,
+                    fontWeight: 700,
+                    padding: "4px 10px",
+                    borderRadius: 100,
+                    background: tr.upcoming ? "rgba(230,57,70,0.12)" : "rgba(255,255,255,0.04)",
+                    color: tr.upcoming ? "#e63946" : "#6b7280",
+                    border: `1px solid ${tr.upcoming ? "rgba(230,57,70,0.3)" : "#2a2a2a"}`,
+                  }}
                 >
-                  {tournament.upcoming ? (
-                    <>
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                      {t("upcoming")}
-                    </>
-                  ) : (
-                    t("past")
+                  {tr.upcoming && (
+                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#e63946", display: "inline-block", animation: "pulse-dot 1.5s ease-in-out infinite" }} />
                   )}
+                  {tr.upcoming ? t("upcoming") : t("past")}
                 </span>
-                <span className="text-zinc-600 text-xs">{tournament.country}</span>
+                <span style={{ fontSize: 11, color: "#4b5563", fontWeight: 600 }}>{tr.country}</span>
               </div>
 
-              <h3 className="text-white font-semibold text-base mb-3 leading-snug group-hover:text-red-400 transition-colors">
-                {tournament.name}
+              {/* Name */}
+              <h3 style={{ color: "#f3f4f6", fontSize: 15, fontWeight: 700, lineHeight: 1.4, margin: "0 0 14px" }}>
+                {tr.name}
               </h3>
 
-              <div className="flex flex-col gap-1.5 text-sm text-zinc-500">
-                <div className="flex items-center gap-2">
-                  <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span>{tournament.city}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <span>
-                    {new Date(tournament.date).toLocaleDateString("pl-PL", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </span>
-                </div>
+              {/* Meta */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {[
+                  {
+                    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />,
+                    text: tr.city,
+                  },
+                  {
+                    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />,
+                    text: new Date(tr.date).toLocaleDateString("pl-PL", { year: "numeric", month: "long", day: "numeric" }),
+                  },
+                ].map((row, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, color: "#6b7280", fontSize: 13 }}>
+                    <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ flexShrink: 0 }}>
+                      {row.icon}
+                    </svg>
+                    {row.text}
+                  </div>
+                ))}
               </div>
 
-              <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-red-400 group-hover:gap-2.5 transition-all">
+              {/* CTA link */}
+              <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 6, color: "#e63946", fontSize: 12, fontWeight: 700 }}>
                 {t("viewPhotos")}
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
             </a>
           ))}
         </div>
       </div>
+
+      <style>{`
+        @keyframes pulse-dot {
+          0%, 100% { opacity: 1; }
+          50%       { opacity: 0.3; }
+        }
+      `}</style>
     </section>
   );
 }

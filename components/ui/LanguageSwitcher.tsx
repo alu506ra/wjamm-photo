@@ -22,7 +22,7 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const current = languages.find((l) => l.code === locale) || languages[0];
+  const current = languages.find((l) => l.code === locale) ?? languages[0];
 
   const switchLocale = (code: string) => {
     const segments = pathname.split("/");
@@ -32,35 +32,88 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="relative">
+    <div style={{ position: "relative" }}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors text-sm text-white border border-zinc-700"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          padding: "6px 12px",
+          borderRadius: 8,
+          background: "#1a1a1a",
+          border: "1px solid #2a2a2a",
+          color: "#fff",
+          cursor: "pointer",
+          fontSize: 13,
+          fontWeight: 600,
+          transition: "background 0.2s",
+        }}
+        onMouseEnter={(e) => { e.currentTarget.style.background = "#222"; }}
+        onMouseLeave={(e) => { e.currentTarget.style.background = "#1a1a1a"; }}
         aria-label="Change language"
       >
-        <span>{current.flag}</span>
-        <span className="hidden sm:inline uppercase font-medium">{current.code}</span>
+        <span style={{ fontSize: 16 }}>{current.flag}</span>
+        <span style={{ textTransform: "uppercase", letterSpacing: "0.05em" }}>{current.code}</span>
         <svg
-          className={`w-3 h-3 transition-transform ${open ? "rotate-180" : ""}`}
+          width="10"
+          height="10"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          style={{ transition: "transform 0.2s", transform: open ? "rotate(180deg)" : "none", color: "#9ca3af" }}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-48 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl z-50 overflow-hidden">
+        <div
+          style={{
+            position: "absolute",
+            right: 0,
+            top: "calc(100% + 8px)",
+            width: 192,
+            background: "#111",
+            border: "1px solid #2a2a2a",
+            borderRadius: 12,
+            boxShadow: "0 16px 48px rgba(0,0,0,0.6)",
+            zIndex: 200,
+            overflow: "hidden",
+          }}
+        >
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => switchLocale(lang.code)}
-              className={`flex items-center gap-2.5 w-full px-4 py-2.5 text-sm text-left transition-colors hover:bg-zinc-800 ${
-                lang.code === locale ? "text-red-400 bg-zinc-800" : "text-zinc-200"
-              }`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                width: "100%",
+                textAlign: "left",
+                padding: "10px 16px",
+                background: lang.code === locale ? "#1a1a1a" : "transparent",
+                border: "none",
+                cursor: "pointer",
+                color: lang.code === locale ? "#e63946" : "#d1d5db",
+                fontSize: 13,
+                transition: "background 0.15s, color 0.15s",
+              }}
+              onMouseEnter={(e) => {
+                if (lang.code !== locale) {
+                  e.currentTarget.style.background = "#1a1a1a";
+                  e.currentTarget.style.color = "#fff";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (lang.code !== locale) {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "#d1d5db";
+                }
+              }}
             >
-              <span>{lang.flag}</span>
+              <span style={{ fontSize: 16 }}>{lang.flag}</span>
               <span>{lang.label}</span>
             </button>
           ))}

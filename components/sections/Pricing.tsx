@@ -10,75 +10,118 @@ export default function Pricing() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) setVisible(true); },
+      { threshold: 0.08 }
     );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
   }, []);
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const scrollToContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <section
       id="pricing"
       ref={ref}
-      className={`py-24 px-4 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      style={{
+        padding: "100px 24px",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(32px)",
+        transition: "opacity 0.7s ease-out, transform 0.7s ease-out",
+      }}
     >
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-14">
-          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">
-            wjamm-photo.pl
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mt-2">{t("title")}</h2>
-          <p className="text-zinc-400 text-lg mt-4 max-w-2xl mx-auto">{t("subtitle")}</p>
+      <div style={{ maxWidth: 960, margin: "0 auto" }}>
+        <div style={{ textAlign: "center", marginBottom: 56 }}>
+          <div className="section-tag">wjamm-photo.pl</div>
+          <h2 className="section-title">{t("title")}</h2>
+          <p className="section-subtitle">{t("subtitle")}</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-8">
-          {pricingTiers.map((tier, i) => (
+        {/* Pricing cards */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+            gap: 16,
+            alignItems: "end",
+            marginBottom: 32,
+          }}
+        >
+          {pricingTiers.map((tier) => (
             <div
               key={tier.id}
-              className={`relative flex flex-col items-center rounded-2xl p-6 border transition-all duration-200 hover:-translate-y-1 ${
-                tier.popular
-                  ? "bg-red-500 border-red-400 shadow-2xl shadow-red-500/30 scale-105"
-                  : "bg-zinc-900 border-zinc-800 hover:border-zinc-600"
-              }`}
-              style={{ transitionDelay: `${i * 60}ms` }}
+              style={{
+                position: "relative",
+                borderRadius: 20,
+                padding: tier.popular ? "36px 20px 28px" : "28px 20px",
+                textAlign: "center",
+                background: tier.popular
+                  ? "linear-gradient(145deg, #e63946 0%, #c1121f 100%)"
+                  : "#1a1a1a",
+                border: tier.popular ? "none" : "1px solid #2a2a2a",
+                boxShadow: tier.popular ? "0 16px 48px rgba(230,57,70,0.35)" : "none",
+                transform: tier.popular ? "scale(1.04)" : "none",
+                transition: "transform 0.2s",
+              }}
             >
               {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-red-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow">
+                <div
+                  style={{
+                    position: "absolute",
+                    top: -13,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    background: "#fff",
+                    color: "#e63946",
+                    fontSize: 10,
+                    fontWeight: 900,
+                    padding: "4px 12px",
+                    borderRadius: 100,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+                    whiteSpace: "nowrap",
+                  }}
+                >
                   Bestseller
                 </div>
               )}
 
-              <div className={`text-5xl font-black mb-1 ${tier.popular ? "text-white" : "text-white"}`}>
+              <div style={{ fontSize: 48, fontWeight: 900, color: "#fff", lineHeight: 1 }}>
                 {tier.quantity}
               </div>
-              <div className={`text-sm mb-5 ${tier.popular ? "text-red-100" : "text-zinc-500"}`}>
+              <div style={{ fontSize: 13, color: tier.popular ? "rgba(255,255,255,0.75)" : "#6b7280", marginBottom: 20, marginTop: 2 }}>
                 {tier.quantity === 1 ? t("photo") : t("photos")}
               </div>
 
-              <div className={`text-3xl font-bold mb-1 ${tier.popular ? "text-white" : "text-red-400"}`}>
+              <div style={{ fontSize: 34, fontWeight: 900, color: tier.popular ? "#fff" : "#e63946", lineHeight: 1 }}>
                 {tier.price}
               </div>
-              <div className={`text-sm mb-6 ${tier.popular ? "text-red-100" : "text-zinc-500"}`}>
+              <div style={{ fontSize: 13, color: tier.popular ? "rgba(255,255,255,0.75)" : "#6b7280", marginBottom: 4 }}>
                 {t("currency")}
               </div>
 
-              <div className={`text-xs text-center ${tier.popular ? "text-red-100" : "text-zinc-600"}`}>
-                ~{Math.round(tier.price / tier.quantity)} {t("currency")} / {t("photo")}
+              <div style={{ fontSize: 11, color: tier.popular ? "rgba(255,255,255,0.5)" : "#4b5563", marginBottom: 20 }}>
+                ~{Math.round(tier.price / tier.quantity)} {t("currency")}/{t("photo")}
               </div>
 
               <button
                 onClick={scrollToContact}
-                className={`mt-5 w-full py-2.5 rounded-xl text-sm font-semibold transition-all ${
-                  tier.popular
-                    ? "bg-white text-red-500 hover:bg-red-50"
-                    : "bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700"
-                }`}
+                style={{
+                  width: "100%",
+                  padding: "10px 0",
+                  borderRadius: 10,
+                  fontSize: 13,
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  border: "none",
+                  background: tier.popular ? "#fff" : "#222",
+                  color: tier.popular ? "#e63946" : "#fff",
+                  transition: "opacity 0.2s",
+                }}
+                onMouseEnter={(e) => { (e.target as HTMLElement).style.opacity = "0.85"; }}
+                onMouseLeave={(e) => { (e.target as HTMLElement).style.opacity = "1"; }}
               >
                 {t("buyNow")}
               </button>
@@ -86,11 +129,20 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="text-center space-y-2">
-          <p className="text-zinc-500 text-sm">{t("note")}</p>
+        <div style={{ textAlign: "center" }}>
+          <p style={{ color: "#6b7280", fontSize: 14, marginBottom: 8 }}>{t("note")}</p>
           <button
             onClick={scrollToContact}
-            className="text-red-400 hover:text-red-300 text-sm font-medium transition-colors underline underline-offset-4"
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              color: "#e63946",
+              fontSize: 14,
+              fontWeight: 600,
+              textDecoration: "underline",
+              textUnderlineOffset: 4,
+            }}
           >
             {t("contact")}
           </button>

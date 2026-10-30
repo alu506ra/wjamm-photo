@@ -2,10 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import Logo from "@/components/ui/Logo";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
-const navIds = ["about", "tournaments", "pricing", "contact"] as const;
+const NAV_IDS = ["about", "tournaments", "pricing", "contact"] as const;
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -14,8 +13,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -26,44 +25,91 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-zinc-950/95 backdrop-blur-md shadow-lg shadow-black/40" : "bg-transparent"
-      }`}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
+        transition: "background 0.3s, box-shadow 0.3s",
+        background: scrolled ? "rgba(10,10,10,0.95)" : "transparent",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        boxShadow: scrolled ? "0 1px 0 rgba(255,255,255,0.06)" : "none",
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Logo />
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
+          {/* Logo */}
+          <button
+            onClick={() => scrollTo("hero")}
+            style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+          >
+            <span style={{ fontSize: 22, fontWeight: 900, letterSpacing: "-0.5px", color: "#fff" }}>
+              WJAMM<span style={{ color: "#e63946" }}>Photo</span>
+            </span>
+          </button>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            {navIds.map((id) => (
+          <nav style={{ display: "flex", alignItems: "center", gap: 32 }} className="hidden-mobile">
+            {NAV_IDS.map((id) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className="text-zinc-300 hover:text-white text-sm font-medium transition-colors hover:text-red-400"
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  color: "#d1d5db",
+                  fontSize: 14,
+                  fontWeight: 500,
+                  padding: "4px 0",
+                  position: "relative",
+                  transition: "color 0.2s",
+                }}
+                className="nav-link"
+                onMouseEnter={(e) => { (e.target as HTMLElement).style.color = "#e63946"; }}
+                onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "#d1d5db"; }}
               >
                 {t(id)}
               </button>
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <LanguageSwitcher />
             {/* Hamburger */}
             <button
-              className="md:hidden flex flex-col gap-1.5 p-2"
               onClick={() => setMenuOpen(!menuOpen)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: 8,
+                display: "flex",
+                flexDirection: "column",
+                gap: 5,
+              }}
+              className="show-mobile"
               aria-label="Menu"
             >
-              <span
-                className={`block w-6 h-0.5 bg-white transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-white transition-all ${menuOpen ? "opacity-0" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-white transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-              />
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  style={{
+                    display: "block",
+                    width: 22,
+                    height: 2,
+                    background: "#fff",
+                    borderRadius: 2,
+                    transition: "transform 0.2s, opacity 0.2s",
+                    transform:
+                      menuOpen && i === 0 ? "rotate(45deg) translate(5px, 5px)"
+                      : menuOpen && i === 2 ? "rotate(-45deg) translate(5px, -5px)"
+                      : "none",
+                    opacity: menuOpen && i === 1 ? 0 : 1,
+                  }}
+                />
+              ))}
             </button>
           </div>
         </div>
@@ -71,20 +117,48 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-zinc-950/98 backdrop-blur-md border-t border-zinc-800">
-          <nav className="px-4 py-4 flex flex-col gap-1">
-            {navIds.map((id) => (
-              <button
-                key={id}
-                onClick={() => scrollTo(id)}
-                className="text-left text-zinc-200 hover:text-red-400 py-3 px-2 text-base font-medium border-b border-zinc-800/50 last:border-0 transition-colors"
-              >
-                {t(id)}
-              </button>
-            ))}
-          </nav>
+        <div
+          style={{
+            background: "rgba(10,10,10,0.98)",
+            borderTop: "1px solid #222",
+            padding: "8px 0 16px",
+          }}
+          className="show-mobile"
+        >
+          {NAV_IDS.map((id) => (
+            <button
+              key={id}
+              onClick={() => scrollTo(id)}
+              style={{
+                display: "block",
+                width: "100%",
+                textAlign: "left",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: "#d1d5db",
+                fontSize: 16,
+                fontWeight: 500,
+                padding: "14px 24px",
+                borderBottom: "1px solid #1a1a1a",
+              }}
+            >
+              {t(id)}
+            </button>
+          ))}
         </div>
       )}
+
+      <style>{`
+        @media (min-width: 768px) {
+          .hidden-mobile { display: flex !important; }
+          .show-mobile   { display: none !important; }
+        }
+        @media (max-width: 767px) {
+          .hidden-mobile { display: none !important; }
+          .show-mobile   { display: flex !important; }
+        }
+      `}</style>
     </header>
   );
 }
