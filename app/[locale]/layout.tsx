@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("title"),
       description: t("description"),
       url: `https://wjamm-photo.pl/${locale}`,
-      siteName: "WJAMM Photo",
+      siteName: "Fotografia WJAMM – Jacek Galewicz",
       type: "website",
       locale: locale,
     },

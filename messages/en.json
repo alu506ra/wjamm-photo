@@ -14,10 +14,10 @@
   },
   "about": {
     "title": "About the Photographer",
-    "p1": "I am a photographer specializing in dance photography. For over 10 years I have accompanied dancers at competitions across Poland and Europe, capturing every emotion-filled moment of movement.",
+    "p1": "I am Jacek Galewicz — a photographer specializing in dance photography. For over 10 years I have accompanied dancers at competitions across Poland and Europe, capturing every emotion-filled moment of movement.",
     "p2": "My passion is conveying the dynamics of dance — that fleeting moment when music and movement become one. I work with professional equipment capable of capturing the fastest tempos.",
     "p3": "I collaborate with dancers, dance schools and competition organizers throughout Poland.",
-    "imageAlt": "WJAMM Photo — dance photographer"
+    "imageAlt": "Fotografia WJAMM – Jacek Galewicz, dance photographer"
   },
   "tournaments": {
     "title": "Tournaments",
@@ -60,13 +60,13 @@
     "messagePlaceholder": "Hi! I was at the tournament in... and I'd like to order photos..."
   },
   "footer": {
-    "tagline": "Dance photography at the highest level",
+    "tagline": "Fotografia WJAMM – Jacek Galewicz. Dance photography at the highest level.",
     "quickLinks": "Quick Links",
     "followUs": "Follow Us",
     "rights": "All rights reserved"
   },
   "meta": {
-    "title": "WJAMM Photo — Dance Photography",
-    "description": "Professional dance photography. Tournaments, competitions, shows. Order your photos from dance competitions in Poland and Europe."
+    "title": "Fotografia WJAMM – Jacek Galewicz | Dance Photography",
+    "description": "Professional dance photography by Jacek Galewicz. Tournaments, competitions, shows. Order your photos from dance competitions in Poland and Europe."
   }
 }

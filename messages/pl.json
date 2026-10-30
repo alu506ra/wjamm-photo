@@ -14,10 +14,10 @@
   },
   "about": {
     "title": "O fotografze",
-    "p1": "Jestem fotografem specjalizującym się w fotografii tanecznej. Od ponad 10 lat towarzyszę tancerzom na turniejach w całej Polsce i Europie, uwieczniając każdą chwilę pełną emocji i ruchu.",
+    "p1": "Jestem Jacek Galewicz — fotograf specjalizujący się w fotografii tanecznej. Od ponad 10 lat towarzyszę tancerzom na turniejach w całej Polsce i Europie, uwieczniając każdą chwilę pełną emocji i ruchu.",
     "p2": "Moją pasją jest oddanie dynamiki tańca — tej ulotnej chwili, gdy muzyka i ruch łączą się w jedno. Pracuję z profesjonalnym sprzętem, który pozwala uchwycić najszybsze tempo.",
     "p3": "Współpracuję z tancerzami, szkołami tańca i organizatorami turniejów na terenie całej Polski.",
-    "imageAlt": "WJAMM Photo — fotograf taneczny"
+    "imageAlt": "Fotografia WJAMM – Jacek Galewicz, fotograf taneczny"
   },
   "tournaments": {
     "title": "Turnieje",
@@ -57,16 +57,16 @@
     "namePlaceholder": "Jan Kowalski",
     "emailPlaceholder": "jan@example.com",
     "subjectPlaceholder": "Zapytanie o zdjęcia z turnieju",
-    "messagePlaceholder": "Cześć! Byłem na turnieju w... i chciałbym zamówić zdjęcia..."
+    "messagePlaceholder": "Cześć! Byłam/Byłem na turnieju w... i chciałabym/chciałbym zamówić zdjęcia..."
   },
   "footer": {
-    "tagline": "Fotografia taneczna na najwyższym poziomie",
+    "tagline": "Fotografia WJAMM – Jacek Galewicz. Fotografia taneczna na najwyższym poziomie.",
     "quickLinks": "Szybkie linki",
     "followUs": "Obserwuj",
     "rights": "Wszelkie prawa zastrzeżone"
   },
   "meta": {
-    "title": "WJAMM Photo — Fotografia Taneczna",
+    "title": "Fotografia WJAMM – Jacek Galewicz | Fotografia Taneczna",
     "description": "Profesjonalna fotografia taneczna. Turnieje, zawody, pokazy. Zamów swoje zdjęcia z turniejów tanecznych w Polsce i Europie."
   }
 }

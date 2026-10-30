@@ -44,8 +44,13 @@ export default function Header() {
             onClick={() => scrollTo("hero")}
             style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
           >
-            <span style={{ fontSize: 22, fontWeight: 900, letterSpacing: "-0.5px", color: "#fff" }}>
-              WJAMM<span style={{ color: "#e63946" }}>Photo</span>
+            <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.1, textAlign: "left" }}>
+              <span style={{ fontSize: 18, fontWeight: 900, letterSpacing: "-0.5px", color: "#fff" }}>
+                Fotografia <span style={{ color: "#e63946" }}>WJAMM</span>
+              </span>
+              <span style={{ fontSize: 11, fontWeight: 500, color: "#9ca3af", letterSpacing: "0.04em" }}>
+                Jacek Galewicz
+              </span>
             </span>
           </button>
 

@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     }
 
     const resendApiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_EMAIL ?? "kontakt@wjamm-photo.pl";
+    const toEmail = process.env.CONTACT_EMAIL ?? "jacek@wjamm-photo.pl";
 
     if (resendApiKey) {
       const res = await fetch("https://api.resend.com/emails", {
@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "WJAMM Photo <noreply@wjamm-photo.pl>",
+          from: "Fotografia WJAMM – Jacek Galewicz <noreply@wjamm-photo.pl>",
           to: [toEmail],
           reply_to: email,
           subject: `[WJAMM Photo][${locale?.toUpperCase() ?? "PL"}] ${subject}`,
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
               <div style="background: #1a1a1a; padding: 24px; border-radius: 12px; margin-bottom: 24px;">
                 <h1 style="color: #e63946; margin: 0 0 4px; font-size: 20px;">WJAMM Photo</h1>
-                <p style="color: #888; margin: 0; font-size: 13px;">Nowa wiadomość z formularza kontaktowego</p>
+                <p style="color: #888; margin: 0; font-size: 13px;">Fotografia WJAMM – Jacek Galewicz | Nowa wiadomość z formularza kontaktowego</p>
               </div>
               <table style="width: 100%; border-collapse: collapse; background: #222; border-radius: 12px; overflow: hidden;">
                 <tr>

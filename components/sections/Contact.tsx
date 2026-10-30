@@ -36,23 +36,25 @@ export default function Contact() {
     }
   };
 
+  const phoneIcon = <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />;
+
   const contactItems = [
     {
       label: t("phone"),
-      value: "+48 XXX XXX XXX",
-      href: "tel:+48000000000",
-      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
+      values: [
+        { display: "+48 501 007 403", href: "tel:+48501007403" },
+        { display: "+48 513 775 033", href: "tel:+48513775033" },
+      ],
+      icon: phoneIcon,
     },
     {
       label: t("emailLabel"),
-      value: "kontakt@wjamm-photo.pl",
-      href: "mailto:kontakt@wjamm-photo.pl",
+      values: [{ display: "jacek@wjamm-photo.pl", href: "mailto:jacek@wjamm-photo.pl" }],
       icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
     },
     {
       label: t("location"),
-      value: t("locationValue"),
-      href: null,
+      values: [{ display: t("locationValue"), href: null }],
       icon: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></>,
     },
   ];
@@ -108,16 +110,20 @@ export default function Contact() {
                   <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#e63946">{item.icon}</svg>
                 </div>
                 <div>
-                  <div style={{ color: "#6b7280", fontSize: 12, marginBottom: 4 }}>{item.label}</div>
-                  {item.href ? (
-                    <a href={item.href} style={{ color: "#f3f4f6", fontWeight: 600, textDecoration: "none", fontSize: 15 }}
-                      onMouseEnter={(e) => { (e.target as HTMLElement).style.color = "#e63946"; }}
-                      onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "#f3f4f6"; }}>
-                      {item.value}
-                    </a>
-                  ) : (
-                    <span style={{ color: "#f3f4f6", fontWeight: 600, fontSize: 15 }}>{item.value}</span>
-                  )}
+                  <div style={{ color: "#6b7280", fontSize: 12, marginBottom: 6 }}>{item.label}</div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                    {item.values.map((v) =>
+                      v.href ? (
+                        <a key={v.display} href={v.href} style={{ color: "#f3f4f6", fontWeight: 600, textDecoration: "none", fontSize: 15, display: "block" }}
+                          onMouseEnter={(e) => { (e.target as HTMLElement).style.color = "#e63946"; }}
+                          onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "#f3f4f6"; }}>
+                          {v.display}
+                        </a>
+                      ) : (
+                        <span key={v.display} style={{ color: "#f3f4f6", fontWeight: 600, fontSize: 15 }}>{v.display}</span>
+                      )
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

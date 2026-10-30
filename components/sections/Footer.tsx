@@ -30,8 +30,13 @@ export default function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 40, marginBottom: 48 }} className="footer-grid">
           {/* Brand */}
           <div>
-            <div style={{ fontSize: 22, fontWeight: 900, color: "#fff", marginBottom: 12 }}>
-              WJAMM<span style={{ color: "#e63946" }}>Photo</span>
+            <div style={{ marginBottom: 12 }}>
+              <div style={{ fontSize: 18, fontWeight: 900, color: "#fff", lineHeight: 1.2 }}>
+                Fotografia <span style={{ color: "#e63946" }}>WJAMM</span>
+              </div>
+              <div style={{ fontSize: 12, color: "#9ca3af", fontWeight: 500, marginTop: 2 }}>
+                Jacek Galewicz
+              </div>
             </div>
             <p style={{ color: "#6b7280", fontSize: 14, lineHeight: 1.7, maxWidth: 260, marginBottom: 20 }}>
               {t("tagline")}
@@ -147,7 +152,7 @@ export default function Footer() {
             fontSize: 12,
           }}
         >
-          <span>© {year} WJAMM Photo. {t("rights")}.</span>
+          <span>© {year} Fotografia WJAMM – Jacek Galewicz. {t("rights")}.</span>
           <a href="https://wjamm-photo.pl" style={{ color: "#4b5563", textDecoration: "none" }}
             onMouseEnter={(e) => { (e.target as HTMLElement).style.color = "#9ca3af"; }}
             onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "#4b5563"; }}>
