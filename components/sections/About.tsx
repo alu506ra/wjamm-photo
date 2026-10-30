@@ -62,7 +62,7 @@ export default function About() {
 
           {/* Text */}
           <div style={{ order: 1 }} className="about-text">
-            <div className="section-tag">WJAMM Photo</div>
+            <div className="section-tag">Fotografia WJAMM</div>
             <h2 className="section-title" style={{ marginBottom: 28 }}>{t("title")}</h2>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>

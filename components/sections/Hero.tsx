@@ -106,7 +106,7 @@ export default function Hero() {
             }}
           />
           <span style={{ color: "#e63946", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>
-            WJAMM Photo
+            Fotografia WJAMM
           </span>
         </div>
 

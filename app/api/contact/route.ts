@@ -23,11 +23,11 @@ export async function POST(req: NextRequest) {
           from: "Fotografia WJAMM – Jacek Galewicz <noreply@wjamm-photo.pl>",
           to: [toEmail],
           reply_to: email,
-          subject: `[WJAMM Photo][${locale?.toUpperCase() ?? "PL"}] ${subject}`,
+          subject: `[Fotografia WJAMM][${locale?.toUpperCase() ?? "PL"}] ${subject}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
               <div style="background: #1a1a1a; padding: 24px; border-radius: 12px; margin-bottom: 24px;">
-                <h1 style="color: #e63946; margin: 0 0 4px; font-size: 20px;">WJAMM Photo</h1>
+                <h1 style="color: #e63946; margin: 0 0 4px; font-size: 20px;">Fotografia WJAMM – Jacek Galewicz</h1>
                 <p style="color: #888; margin: 0; font-size: 13px;">Fotografia WJAMM – Jacek Galewicz | Nowa wiadomość z formularza kontaktowego</p>
               </div>
               <table style="width: 100%; border-collapse: collapse; background: #222; border-radius: 12px; overflow: hidden;">

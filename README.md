@@ -1,6 +1,6 @@
-# WJAMM Photo — Strona internetowa fotografa tanecznego
+# Fotografia WJAMM – Jacek Galewicz — Strona internetowa fotografa tanecznego
 
-Nowoczesna, wielojęzyczna strona internetowa dla fotografa tanecznego WJAMM Photo.
+Nowoczesna, wielojęzyczna strona internetowa fotografa tanecznego Jacka Galewicza.
 
 ## Technologia
 
@@ -29,7 +29,7 @@ Nowoczesna, wielojęzyczna strona internetowa dla fotografa tanecznego WJAMM Pho
 
 ```bash
 # Sklonuj repozytorium
-git clone https://github.com/wjamm-photo-manager/wjamm-photo.git
+git clone https://github.com/alu506ra/wjamm-photo.git
 cd wjamm-photo
 
 # Zainstaluj zależności
@@ -79,10 +79,10 @@ vercel --prod
 
 1. Wrzuć kod na GitHub (patrz niżej)
 2. Wejdź na [vercel.com](https://vercel.com) → **Add New Project**
-3. Zaimportuj repozytorium `wjamm-photo-manager/wjamm-photo`
+3. Zaimportuj repozytorium `alu506ra/wjamm-photo`
 4. W sekcji **Environment Variables** dodaj:
    - `RESEND_API_KEY` → Twój klucz z resend.com
-   - `CONTACT_EMAIL` → kontakt@wjamm-photo.pl
+   - `CONTACT_EMAIL` → jacek@wjamm-photo.pl
 5. Kliknij **Deploy** — gotowe!
 
 Każdy push na `main` automatycznie builduje i deployuje stronę.
@@ -116,7 +116,7 @@ W panelu Cloudflare Pages dodaj zmienne środowiskowe (Settings → Environment 
 cd /agent/wjamm-photo   # lub gdzie pobrałeś projekt
 
 # Utwórz repozytorium na github.com (jeśli jeszcze nie istnieje)
-# Zaloguj się jako wjamm-photo-manager i utwórz repo "wjamm-photo"
+# Repo już istnieje: https://github.com/alu506ra/wjamm-photo
 
 # Wrzuć kod
 git push -u origin main
@@ -138,7 +138,7 @@ Jeśli GitHub wymaga uwierzytelnienia, użyj **Personal Access Token** (PAT):
 | **Dane turniejów** | Edytuj `lib/tournaments.ts` — zmień nazwy, daty, miasta i **linki Zalamo** (`zalamo_link`) |
 | **Cennik** | Edytuj `lib/pricing.ts` — zmień progi ilościowe i ceny |
 | **Telefon kontaktowy** | Zmień `+48 XXX XXX XXX` w `components/sections/Contact.tsx` |
-| **E-mail** | Zmień `kontakt@wjamm-photo.pl` w `components/sections/Contact.tsx` i `.env.local` |
+| **E-mail** | Ustawiony na `jacek@wjamm-photo.pl` w `Contact.tsx`, `API route` i `.env.local` |
 | **Social media URL** | Zmień linki Instagram/Facebook w `components/sections/Footer.tsx` |
 | **Domena** | Zmień `https://wjamm-photo.pl` w `app/[locale]/layout.tsx` i `app/sitemap.ts` |
 | **Google Maps** | Zamień placeholder w `Contact.tsx` na `<iframe>` z Google Maps |
