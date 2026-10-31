@@ -78,7 +78,7 @@ export const tournaments: Tournament[] = [
     date: "2026-10-24",
     city: "Dobrzeń Wielki",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-plasowadla",
     upcoming: false,
   },
   {
@@ -87,7 +87,7 @@ export const tournaments: Tournament[] = [
     date: "2026-10-18",
     city: "Grodzisk Mazowiecki",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/boom-cup-2026",
     upcoming: false,
   },
   {
@@ -96,7 +96,7 @@ export const tournaments: Tournament[] = [
     date: "2026-10-10",
     city: "Zabrze",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/golden-swivel-zabrze-01",
     upcoming: false,
   },
   {
@@ -105,7 +105,7 @@ export const tournaments: Tournament[] = [
     date: "2026-10-03",
     city: "Zawiercie",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/dance-dont-wait-01",
     upcoming: false,
   },
   {
@@ -114,7 +114,7 @@ export const tournaments: Tournament[] = [
     date: "2026-09-25",
     city: "Częstochowa",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/krolowa-sniegu-kontra",
     upcoming: false,
   },
   {
@@ -123,7 +123,7 @@ export const tournaments: Tournament[] = [
     date: "2026-09-19",
     city: "Wronki",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-09-19-wirujaca-paleczka-wronki",
     upcoming: false,
   },
   {
@@ -132,7 +132,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-21",
     city: "Elbląg",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026konfrontacje-elblag",
     upcoming: false,
   },
   {
@@ -141,7 +141,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-20",
     city: "Elbląg",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026pomosty-elblag",
     upcoming: false,
   },
   {
@@ -150,7 +150,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-14",
     city: "Legionowo",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/timefordance-lato26-dd",
     upcoming: false,
   },
   {
@@ -159,7 +159,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-14",
     city: "Legionowo",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/timefordance-lato26-pai",
     upcoming: false,
   },
   {
@@ -168,7 +168,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-13",
     city: "Legionowo",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/timefordance-lato26-hh",
     upcoming: false,
   },
   {
@@ -177,7 +177,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-07",
     city: "Gogolin",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-06-07-niedz-gogolin-gpp",
     upcoming: false,
   },
   {
@@ -186,7 +186,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-07",
     city: "Gogolin",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/gpp-senior-gogolin-2026",
     upcoming: false,
   },
   {
@@ -195,7 +195,7 @@ export const tournaments: Tournament[] = [
     date: "2026-06-06",
     city: "Gogolin",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-06-06-sob-gogolin-gpp",
     upcoming: false,
   },
   {
@@ -204,7 +204,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-31",
     city: "Kędzierzyn-Koźle",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/mp-mazoretek-niedziela",
     upcoming: false,
   },
   {
@@ -213,7 +213,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-30",
     city: "Dobrzeń Wielki",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/silesian-cup",
     upcoming: false,
   },
   {
@@ -222,7 +222,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-29",
     city: "Kędzierzyn-Koźle",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/mp-mazoretek-piatek",
     upcoming: false,
   },
   {
@@ -231,7 +231,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-24",
     city: "Poraj",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/poraj-festival-towarzyski",
     upcoming: false,
   },
   {
@@ -240,7 +240,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-23",
     city: "Poraj",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/poraj-cup-nowoczesny",
     upcoming: false,
   },
   {
@@ -249,7 +249,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-17",
     city: "",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/sznurowadlo-niedziela-silk",
     upcoming: false,
   },
   {
@@ -258,7 +258,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-16",
     city: "",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/sznurowadlo-sobota-hoop",
     upcoming: false,
   },
   {
@@ -267,7 +267,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-16",
     city: "",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/sznurowadlo-sobota-taniec",
     upcoming: false,
   },
   {
@@ -276,7 +276,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-10",
     city: "Toruń",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/chancefordance-pai-ift",
     upcoming: false,
   },
   {
@@ -285,7 +285,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-09",
     city: "Toruń",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/chancefordance-hiphop-hil",
     upcoming: false,
   },
   {
@@ -294,7 +294,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-09",
     city: "Toruń",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/chancefordance-disco-dance",
     upcoming: false,
   },
   {
@@ -303,7 +303,7 @@ export const tournaments: Tournament[] = [
     date: "2026-05-01",
     city: "Dobczyce",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-05-01-mazoretki-dobczyce",
     upcoming: false,
   },
   {
@@ -312,7 +312,7 @@ export const tournaments: Tournament[] = [
     date: "2026-04-26",
     city: "Będzin",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/akcent-cup-towarzyski",
     upcoming: false,
   },
   {
@@ -321,7 +321,7 @@ export const tournaments: Tournament[] = [
     date: "2026-04-25",
     city: "Będzin",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/akcent-cup-sobota",
     upcoming: false,
   },
   {
@@ -330,7 +330,7 @@ export const tournaments: Tournament[] = [
     date: "2026-04-18",
     city: "",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-04-18-ozimek-finaly-sobota",
     upcoming: false,
   },
   {
@@ -339,7 +339,7 @@ export const tournaments: Tournament[] = [
     date: "2026-04-17",
     city: "",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-04-17-ozimek-debiuty",
     upcoming: false,
   },
   {
@@ -348,7 +348,7 @@ export const tournaments: Tournament[] = [
     date: "2026-04-12",
     city: "Pajęczno",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-04-12-pajeczno-towarzyski",
     upcoming: false,
   },
   {
@@ -357,7 +357,7 @@ export const tournaments: Tournament[] = [
     date: "2026-04-11",
     city: "Pajęczno",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-04-11-pajeczno-nowoczesny",
     upcoming: false,
   },
   {
@@ -366,7 +366,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-29",
     city: "Goczałkowice",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-29-goczalkowice-niedziela",
     upcoming: false,
   },
   {
@@ -375,7 +375,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-28",
     city: "Goczałkowice",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-28-goczalkowice-sobota",
     upcoming: false,
   },
   {
@@ -384,7 +384,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-22",
     city: "Błonie",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-22-hiphop-dance-game",
     upcoming: false,
   },
   {
@@ -393,7 +393,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-21",
     city: "Błonie",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-21-pai-dance-game",
     upcoming: false,
   },
   {
@@ -402,7 +402,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-21",
     city: "Błonie",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-21-disco-dance-dance-game",
     upcoming: false,
   },
   {
@@ -411,7 +411,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-15",
     city: "Gorzów Śląski",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-15-roza-olesno",
     upcoming: false,
   },
   {
@@ -420,7 +420,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-14",
     city: "Gorzów Śląski",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-14-d4d",
     upcoming: false,
   },
   {
@@ -429,7 +429,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-07",
     city: "Ornontowice",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-07-mistrzostwa-klas",
     upcoming: false,
   },
   {
@@ -438,7 +438,7 @@ export const tournaments: Tournament[] = [
     date: "2026-03-01",
     city: "Rędziny",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-03-01-redziny-z-pasji-do-tanca-niedz",
     upcoming: false,
   },
   {
@@ -447,7 +447,7 @@ export const tournaments: Tournament[] = [
     date: "2026-02-28",
     city: "Rędziny",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-02-28-gpp-zorba-redziny-sobota",
     upcoming: false,
   },
   {
@@ -456,7 +456,7 @@ export const tournaments: Tournament[] = [
     date: "2026-02-21",
     city: "Kąty Wrocławskie",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-02-21-xxv-katy-wroclawskie",
     upcoming: false,
   },
   {
@@ -465,7 +465,7 @@ export const tournaments: Tournament[] = [
     date: "2026-01-10",
     city: "Szczyrk",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2026-01-10-pro-am-szczyrk-2",
     upcoming: false,
   },
   {
@@ -474,7 +474,7 @@ export const tournaments: Tournament[] = [
     date: "2025-12-13",
     city: "Sosnowiec",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/ix-festiwal-asow-2",
     upcoming: false,
   },
   {
@@ -483,7 +483,7 @@ export const tournaments: Tournament[] = [
     date: "2025-12-07",
     city: "Legionowo",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2025-12-07-tfd25z-pai",
     upcoming: false,
   },
   {
@@ -492,7 +492,7 @@ export const tournaments: Tournament[] = [
     date: "2025-12-06",
     city: "Legionowo",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2025-12-06-tfd25z-hiphop",
     upcoming: false,
   },
   {
@@ -501,7 +501,7 @@ export const tournaments: Tournament[] = [
     date: "2025-12-06",
     city: "Legionowo",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2025-12-06-tfd25z-disco",
     upcoming: false,
   },
   {
@@ -510,7 +510,7 @@ export const tournaments: Tournament[] = [
     date: "2025-11-30",
     city: "",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2025-11-29-zabrze-formacje",
     upcoming: false,
   },
   {
@@ -519,7 +519,7 @@ export const tournaments: Tournament[] = [
     date: "2025-11-29",
     city: "",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2025-11-29-zabrze-formacje",
     upcoming: false,
   },
   {
@@ -537,7 +537,7 @@ export const tournaments: Tournament[] = [
     date: "2025-11-23",
     city: "Będzin",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://bit.ly/Akcent_Cup_Tow_202511",
     upcoming: false,
   },
   {
@@ -546,7 +546,7 @@ export const tournaments: Tournament[] = [
     date: "2025-11-22",
     city: "Będzin",
     country: "PL",
-    zalamo_link: "",
+    zalamo_link: "https://wjammphoto.zalamo.com/s/2025-11-22-fire-cup",
     upcoming: false,
   },
   {
