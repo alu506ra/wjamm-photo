@@ -89,8 +89,8 @@ export default function Tournaments() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-            gap: 10,
+            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
+            gap: 8,
           }}
         >
           {visible_items.map((tr) => (
@@ -187,7 +187,7 @@ function TournamentCard({
       ? `1.5px solid ${hovered && hasLink ? "#ff6b77" : "#e63946"}`
       : `1.5px solid ${hovered && hasLink ? "#4ade80" : "#22c55e"}`,
     borderRadius: 12,
-    padding: "12px 14px",
+    padding: "8px 10px",
     textDecoration: "none",
     color: "inherit",
     cursor: hasLink ? "pointer" : "default",
@@ -207,9 +207,9 @@ function TournamentCard({
             display: "inline-flex",
             alignItems: "center",
             gap: 4,
-            fontSize: 10,
+            fontSize: 9,
             fontWeight: 700,
-            padding: "2px 7px",
+            padding: "1px 5px",
             borderRadius: 100,
             background: "rgba(230,57,70,0.12)",
             color: "#e63946",
@@ -221,9 +221,9 @@ function TournamentCard({
           </span>
         ) : (
           <span style={{
-            fontSize: 10,
+            fontSize: 9,
             fontWeight: 600,
-            padding: "2px 7px",
+            padding: "1px 5px",
             borderRadius: 100,
             background: "rgba(255,255,255,0.04)",
             color: "#4b5563",
@@ -252,7 +252,7 @@ function TournamentCard({
       {/* Tournament name — max 2 lines */}
       <p style={{
         color: hovered ? "#fff" : "#e5e7eb",
-        fontSize: 12.5,
+        fontSize: 11,
         fontWeight: 600,
         lineHeight: 1.4,
         margin: 0,
@@ -269,7 +269,7 @@ function TournamentCard({
       {/* Bottom: date + city */}
       <div style={{ display: "flex", flexDirection: "column", gap: 3, marginTop: "auto" }}>
         {formattedDate && (
-          <div style={{ display: "flex", alignItems: "center", gap: 5, color: "#e63946", fontSize: 11, fontWeight: 600 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 5, color: "#e63946", fontSize: 10, fontWeight: 600 }}>
             <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
@@ -277,7 +277,7 @@ function TournamentCard({
           </div>
         )}
         {tr.city && (
-          <div style={{ display: "flex", alignItems: "center", gap: 5, color: "#6b7280", fontSize: 11 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 5, color: "#6b7280", fontSize: 10 }}>
             <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
