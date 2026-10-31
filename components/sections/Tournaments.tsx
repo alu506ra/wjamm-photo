@@ -188,7 +188,9 @@ function TournamentCard({
         display: "flex",
         flexDirection: "column",
         background: hovered ? "#222" : "#1a1a1a",
-        border: `1px solid ${hovered ? "rgba(230,57,70,0.5)" : "#252525"}`,
+        border: tr.upcoming
+          ? `1.5px solid ${hovered ? "#ff6b77" : "#e63946"}`
+          : `1.5px solid ${hovered ? "#4ade80" : "#22c55e"}`,
         borderRadius: 12,
         padding: "12px 14px",
         textDecoration: "none",
