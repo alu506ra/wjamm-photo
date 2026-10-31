@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { tournaments } from "@/lib/tournaments";
 
 const SHOW_INCREMENT = 48;
@@ -177,32 +177,30 @@ function TournamentCard({
       })()
     : "";
 
-  return (
-    <a
-      href={tr.zalamo_link}
-      target="_blank"
-      rel="noopener noreferrer"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        background: hovered ? "#222" : "#1a1a1a",
-        border: tr.upcoming
-          ? `1.5px solid ${hovered ? "#ff6b77" : "#e63946"}`
-          : `1.5px solid ${hovered ? "#4ade80" : "#22c55e"}`,
-        borderRadius: 12,
-        padding: "12px 14px",
-        textDecoration: "none",
-        color: "inherit",
-        transition: "background 0.15s, border-color 0.15s, transform 0.15s",
-        transform: hovered ? "translateY(-2px)" : "none",
-        boxShadow: hovered ? "0 6px 20px rgba(230,57,70,0.12)" : "none",
-        gap: 8,
-        minHeight: 0,
-      }}
-    >
-      {/* Top row: status badge + external icon */}
+  const hasLink = Boolean(tr.zalamo_link);
+
+  const cardStyle: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    background: hovered && hasLink ? "#222" : "#1a1a1a",
+    border: tr.upcoming
+      ? `1.5px solid ${hovered && hasLink ? "#ff6b77" : "#e63946"}`
+      : `1.5px solid ${hovered && hasLink ? "#4ade80" : "#22c55e"}`,
+    borderRadius: 12,
+    padding: "12px 14px",
+    textDecoration: "none",
+    color: "inherit",
+    cursor: hasLink ? "pointer" : "default",
+    transition: "background 0.15s, border-color 0.15s, transform 0.15s",
+    transform: hovered && hasLink ? "translateY(-2px)" : "none",
+    boxShadow: hovered && hasLink ? "0 6px 20px rgba(34,197,94,0.10)" : "none",
+    gap: 8,
+    minHeight: 0,
+  };
+
+  const inner = (
+    <>
+      {/* Top row: status badge + link indicator */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 4 }}>
         {tr.upcoming ? (
           <span style={{
@@ -235,16 +233,20 @@ function TournamentCard({
             {t("past")}
           </span>
         )}
-        <svg
-          width="11"
-          height="11"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke={hovered ? "#e63946" : "#4b5563"}
-          style={{ flexShrink: 0, transition: "stroke 0.15s" }}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
+        {hasLink ? (
+          <svg
+            width="11"
+            height="11"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke={hovered ? "#22c55e" : "#4b5563"}
+            style={{ flexShrink: 0, transition: "stroke 0.15s" }}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        ) : (
+          <span style={{ fontSize: 9, color: "#374151", fontStyle: "italic" }}>brak galerii</span>
+        )}
       </div>
 
       {/* Tournament name — max 2 lines */}
@@ -283,6 +285,27 @@ function TournamentCard({
           </div>
         )}
       </div>
-    </a>
+    </>
+  );
+
+  if (hasLink) {
+    return (
+      <a
+        href={tr.zalamo_link}
+        target="_blank"
+        rel="noopener noreferrer"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={cardStyle}
+      >
+        {inner}
+      </a>
+    );
+  }
+
+  return (
+    <div style={cardStyle}>
+      {inner}
+    </div>
   );
 }
