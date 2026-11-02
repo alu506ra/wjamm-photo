@@ -76,7 +76,7 @@ export default function About() {
               {[
                 { n: "10+", l: "Lat doświadczenia" },
                 { n: "200+", l: "Turniejów" },
-                { n: "3.000+", l: "Zdjęć" },
+                { n: "3.000.000+", l: "Zdjęć" },
               ].map((s) => (
                 <div key={s.l} style={{ textAlign: "center" }}>
                   <div style={{ fontSize: 32, fontWeight: 900, color: "#e63946" }}>{s.n}</div>

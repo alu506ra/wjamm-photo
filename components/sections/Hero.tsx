@@ -180,7 +180,7 @@ export default function Hero() {
           {[
             { n: "10+", l: "lat doświadczenia" },
             { n: "200+", l: "turniejów" },
-            { n: "3.000+", l: "zdjęć" },
+            { n: "3.000.000+", l: "zdjęć" },
           ].map((s) => (
             <div key={s.l} style={{ textAlign: "center" }}>
               <div style={{ fontSize: 28, fontWeight: 900, color: "#e63946", lineHeight: 1 }}>
