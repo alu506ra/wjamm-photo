@@ -75,8 +75,8 @@ export default function About() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 40, paddingTop: 36, borderTop: "1px solid #222" }}>
               {[
                 { n: "10+", l: "Lat doświadczenia" },
-                { n: "50+", l: "Turniejów" },
-                { n: "10k+", l: "Zdjęć" },
+                { n: "200+", l: "Turniejów" },
+                { n: "3.000+", l: "Zdjęć" },
               ].map((s) => (
                 <div key={s.l} style={{ textAlign: "center" }}>
                   <div style={{ fontSize: 32, fontWeight: 900, color: "#e63946" }}>{s.n}</div>
